@@ -31,6 +31,7 @@ class TargetGroup():
             self.add_targets()
             self.target_speed += 1
             self.game.score.multi += 1
+            self.game.score.level += 1
 
     def reset(self):
         self.target_speed = 1

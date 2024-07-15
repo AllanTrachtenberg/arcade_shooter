@@ -7,9 +7,10 @@ class Holes():
         self.game = game
         self.holes = pygame.sprite.Group()
         self.hits = pygame.sprite.Group()
-        self.shot_sound = pygame.mixer.Sound("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/sound/shot.mp3")
-        self.shot_sound.set_volume(0.5)
+        self.shot_sound = pygame.mixer.Sound("sound/shot.mp3")
+        self.shot_sound.set_volume(0.3)
+        self.missed = 0
+        self.missed_sound = pygame.mixer.Sound("sound/haha.mp3")
 
     def add_hole(self):
         if len(self.holes) > 4:
@@ -28,8 +29,14 @@ class Holes():
             self.game.target_group.targets, self.hits, True, True)
         if self.collision:
             self.game.score.number += 1 * self.game.score.multi
+            self.missed = 0
         self.game.target_group.check_if_empty()
         self.hits.empty()
 
     def reset(self):
         self.holes.empty()
+
+    def missed_mock(self):
+        if self.missed == 3:
+            self.missed_sound.play()
+            self.missed = 0

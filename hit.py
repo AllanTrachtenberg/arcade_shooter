@@ -5,7 +5,6 @@ from images import load_and_get_rect
 class Hit(Sprite):
     def __init__(self):
         super().__init__()
-        self.hit_file = ("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/images/hit.png")
+        self.hit_file = ("images/hit.png")
         self.image, self.rect = load_and_get_rect(self.hit_file)
         self.rect.center = mouse.get_pos()

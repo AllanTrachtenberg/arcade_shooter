@@ -15,10 +15,10 @@ class Target(pygame.sprite.Sprite):
         self.initiate_target()
 
     def load_target_image(self):
-        self.image_file = ("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/images/target1.png")
+        self.image_file = ("images/target1.png")
         self.image, self.rect = load_and_get_rect(self.image_file)
-        self.image, self.rect = reduce_and_get_rect(self.image, self.reduce_width, self.reduce_height)
+        self.image, self.rect = reduce_and_get_rect(self.image, 
+            self.reduce_width, self.reduce_height)
         self.rect.bottomleft = (self.x, self.y)
         
     def initiate_target(self):

@@ -5,8 +5,7 @@ class Aim(Sprite):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        self.image_file = ("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/images/aim2.png")
+        self.image_file = ("images/aim2.png")
         self.image, self.rect = load_and_get_rect(self.image_file)
         self.reduce_width = game.game_window.window_size[0] / 12.5
         self.reduce_height = game.game_window.window_size[0] / 12.5

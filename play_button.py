@@ -4,11 +4,9 @@ from pygame.mixer import Sound
 class PlayButton():
     def __init__(self, game):
         self.game = game
-        self.image_file = ("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/images/play.png")
+        self.image_file = ("images/play.png")
         self.image, self.image_rect = load_and_get_rect(self.image_file)
-        self.play_sound = Sound("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/sound/coin.mp3")
+        self.play_sound = Sound("sound/coin.mp3")
 
     def draw_play_button(self):
         self.image_rect.center = self.game.game_window.screen_rect.center

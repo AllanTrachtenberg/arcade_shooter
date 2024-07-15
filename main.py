@@ -1,7 +1,6 @@
 import pygame
 import sys
 from aim import Aim
-from images import Images
 from game_window import GameWindow
 from curtain import Curtain
 from shelf import Shelf
@@ -17,7 +16,6 @@ class Game:
         pygame.display.set_caption("Arcade Shooter")
         self.font = pygame.font.SysFont(None, 48)
         self.game_window = GameWindow()
-        self.images = Images(self)
         self.aim = Aim(self)
         self.curtains = Curtain(self)
         self.shelf = Shelf(self)
@@ -61,6 +59,7 @@ class Game:
         self.target_group.draw_targets()
         self.curtains.draw_curtains()
         self.score.draw()
+        self.score.draw_level()
         self.timer1.draw()
 
     def reset_elements(self):
@@ -84,13 +83,14 @@ class Game:
                         self.holes.check_collisions()
                         if not self.holes.collision:
                             self.score.number -= 1
+                            self.holes.missed += 1
+                            self.holes.missed_mock()
                 if not self.active:
                     self.mouse_position = pygame.mouse.get_pos()
                     self.play_button.check_play_press()
 
     def add_music(self):
-        pygame.mixer.music.load("profesional/computacion_e_informatica/"
-            "python/playground/pygame/game_1/sound/muchacho.mp3")
+        pygame.mixer.music.load("sound/muchacho.mp3")
         pygame.mixer.music.play(-1)
     
     def stop_music(self):
