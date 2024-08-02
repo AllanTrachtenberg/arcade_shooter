@@ -26,6 +26,7 @@ class Game:
         self.holes = Holes(self)
         self.mouse_position = (0, 0)
         self.active = False
+        self.game_on()
     
     def game_run(self):
         while self.active:
@@ -97,6 +98,4 @@ class Game:
         pygame.mixer.music.stop()
 
 if __name__ == '__main__':
-    game = Game()
-    game.game_on()
-            
+    game = Game()            
