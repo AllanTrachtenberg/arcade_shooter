@@ -9,7 +9,8 @@ Click "play" and start blasting. See how many points you get in
 
 ## How to Run Game
 
-- install requirements
+- Clone repo locally
+- Install requirements
 - Run main.py
 
 ### Requirements
