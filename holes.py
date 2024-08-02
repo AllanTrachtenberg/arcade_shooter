@@ -8,7 +8,7 @@ class Holes():
         self.holes = pygame.sprite.Group()
         self.hits = pygame.sprite.Group()
         self.shot_sound = pygame.mixer.Sound("sound/shot.mp3")
-        self.shot_sound.set_volume(0.3)
+        self.shot_sound.set_volume(0.5)
         self.missed = 0
         self.missed_sound = pygame.mixer.Sound("sound/haha.mp3")
 

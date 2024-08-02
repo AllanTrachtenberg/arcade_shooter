@@ -9,7 +9,7 @@ class Timer():
         self.seconds_counter = 0
         self.time_limit = 30
         self.timer = self.time_limit
-        self.end_sound = Sound("sound/pathetic.wav")
+        self.end_sound = Sound("sound/pathetic.mp3")
 
     def start(self):
         self.fps_counter += 1
