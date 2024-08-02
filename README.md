@@ -1,5 +1,7 @@
 # Arcade Shooter
 
+![](/images/game_image_1.png)
+
 ## Introduction
 
 Simple shooter game.
